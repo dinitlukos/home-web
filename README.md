@@ -14,7 +14,7 @@ cd home-web
 ### Install dependencies
 
 ```
-pnpm install
+npm install
 ```
 
 ### Configure environment
@@ -32,20 +32,20 @@ cp .env.development.example .env.development
 ### Run
 
 ```
-pnpm dev
+npm run dev
 ```
 
 ## Scripts
 
-| Script          | Description                              |
-| --------------- | ---------------------------------------- |
-| `pnpm dev`      | Start the dev server and open a browser  |
-| `pnpm host`     | Start the dev server exposed on your LAN |
-| `pnpm build`    | Type-check and build for production      |
-| `pnpm preview`  | Serve the production build locally       |
-| `pnpm lint`     | Show ESLint errors                       |
-| `pnpm lint:fix` | Fix ESLint errors                        |
-| `pnpm format`   | Format `src` with Prettier               |
+| Script             | Description                              |
+| ------------------ | ---------------------------------------- |
+| `npm run dev`      | Start the dev server and open a browser  |
+| `npm run host`     | Start the dev server exposed on your LAN |
+| `npm run build`    | Type-check and build for production      |
+| `npm run preview`  | Serve the production build locally       |
+| `npm run lint`     | Show ESLint errors                       |
+| `npm run lint:fix` | Fix ESLint errors                        |
+| `npm run format`   | Format `src` with Prettier               |
 
 ## Project Structure
 
