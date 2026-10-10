@@ -37,15 +37,23 @@ npm run dev
 
 ## Scripts
 
-| Script             | Description                              |
-| ------------------ | ---------------------------------------- |
-| `npm run dev`      | Start the dev server and open a browser  |
-| `npm run host`     | Start the dev server exposed on your LAN |
-| `npm run build`    | Type-check and build for production      |
-| `npm run preview`  | Serve the production build locally       |
-| `npm run lint`     | Show ESLint errors                       |
-| `npm run lint:fix` | Fix ESLint errors                        |
-| `npm run format`   | Format `src` with Prettier               |
+| Script               | Description                              |
+| -------------------- | ---------------------------------------- |
+| `npm run dev`        | Start the dev server and open a browser  |
+| `npm run host`       | Start the dev server exposed on your LAN |
+| `npm run build`      | Type-check and build for production      |
+| `npm run preview`    | Serve the production build locally       |
+| `npm run lint`       | Show ESLint errors                       |
+| `npm run lint:fix`   | Fix ESLint errors                        |
+| `npm run format`     | Format `src` with Prettier               |
+| `npm test`           | Run the tests once                       |
+| `npm run test:watch` | Run the tests in watch mode              |
+
+## Testing
+
+Tests use [Vitest](https://vitest.dev) with jsdom and [Testing Library](https://testing-library.com). Put test files next to the code they cover as `*.test.ts` / `*.test.tsx`. `describe`, `it` and `expect` are available globally.
+
+For components that use Redux, render them with `renderWithStore` from `@/test/renderWithStore`. Global test setup lives in `src/test/setup.ts`.
 
 ## Project Structure
 
@@ -57,6 +65,7 @@ src/
   hooks/       Reusable React hooks
   pages/       Route-level pages (Home, Auth)
   routes/      Router configuration
+  test/        Test setup and helpers
   themes/      MUI theme provider
 ```
 
