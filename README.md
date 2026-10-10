@@ -1,47 +1,65 @@
-## vite-mui-ts boilerplate
+# home-web
 
-TypeScript + React + Redux + MUI + RRD + ESLint + Prettier
+Frontend for Home, built with React, TypeScript, Vite, MUI, Redux Toolkit (RTK Query) and React Router.
 
-![vite-mui-ts](https://i.ibb.co/j8JSrhV/Screenshot-2023-07-06-121352.png)
+## Getting Started
 
-### Getting Started
-
-#### Clone the repo
+### Clone the repo
 
 ```
-npx degit emre-cil/vite-mui-ts my-app
+git clone https://github.com/dinitlukos/home-web.git
+cd home-web
 ```
 
-```
-cd my-app
-```
-
-#### Install Dependencies
+### Install dependencies
 
 ```
 pnpm install
 ```
 
-#### Run
+### Configure environment
+
+Copy the example env file and adjust the values:
+
+```
+cp .env.development.example .env.development
+```
+
+| Variable       | Description                | Default                 |
+| -------------- | -------------------------- | ----------------------- |
+| `VITE_API_URL` | Base URL of the API server | `http://localhost:3000` |
+
+### Run
 
 ```
 pnpm dev
 ```
 
-### Scripts
+## Scripts
 
-| Script        | Description                        |
-| ------------- | ---------------------------------- |
-| pnpm dev      | Runs the application.              |
-| pnpm build    | Create builds for the application. |
-| pnpm preview  | Runs the Vite preview              |
-| pnpm lint     | Display eslint errors              |
-| pnpm lint:fix | Fix the eslint errors              |
-| pnpm format   | Runs prettier for all files        |
-| pnpm test     | Run tests                          |
+| Script          | Description                              |
+| --------------- | ---------------------------------------- |
+| `pnpm dev`      | Start the dev server and open a browser  |
+| `pnpm host`     | Start the dev server exposed on your LAN |
+| `pnpm build`    | Type-check and build for production      |
+| `pnpm preview`  | Serve the production build locally       |
+| `pnpm lint`     | Show ESLint errors                       |
+| `pnpm lint:fix` | Fix ESLint errors                        |
+| `pnpm format`   | Format `src` with Prettier               |
 
-### Check List
-
-```
+## Project Structure
 
 ```
+src/
+  app/         Redux store and RTK Query API slice
+  components/  Shared UI components
+  features/    Redux slices grouped by feature
+  hooks/       Reusable React hooks
+  pages/       Route-level pages (Home, Auth)
+  routes/      Router configuration
+  themes/      MUI theme provider
+```
+
+## Credits
+
+Bootstrapped from the [vite-mui-ts](https://github.com/emre-cil/vite-mui-ts) boilerplate by emre-cil.
